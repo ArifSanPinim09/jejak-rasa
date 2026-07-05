@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Core Backgrounds */
+  --color-cream: #FAF6F1;
+  --color-cream-deep: #F0E8DD;
+  --color-sand: #E8DDD0;
+
+  /* Brand Colors */
+  --color-terracotta: #C67B5C;
+  --color-terracotta-dark: #A8604A;
+  --color-olive: #6B7B3C;
+  --color-olive-dark: #4A5A28;
+  --color-warm-clay: #B5651D;
+
+  /* Text */
+  --color-foreground: #2D2A26;
+  --color-foreground-muted: #7A7268;
+  --color-foreground-light: #A39889;
+
+  /* UI Elements */
+  --color-white: #FFFFFF;
+  --color-border: #E5DDD3;
+  --color-overlay: rgba(45, 42, 38, 0.4);
+
+  /* Dark scheme (detail pages) */
+  --color-dark-bg: #1E1B18;
+  --color-dark-surface: #2A2622;
+  --color-dark-text: #E8E0D8;
+  --color-dark-muted: #9A9088;
+
+  /* Semantic */
+  --color-danger: #C45B4A;
+  --color-safe: #6B7B3C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  color: var(--color-foreground);
+}
+
+::selection {
+  background-color: rgba(198, 123, 92, 0.25);
+  color: var(--color-foreground);
+}
+
+/* Playfair Display utility */
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Inter utility */
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Grain texture overlay for warmth */
+.grain-overlay {
+  position: relative;
+}
+
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  z-index: 1;
+}
+
+.grain-overlay > * {
+  position: relative;
+  z-index: 2;
 }
