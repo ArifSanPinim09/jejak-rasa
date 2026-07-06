@@ -25,7 +25,7 @@ const kulinerLocations = [
   },
   {
     name: "Sate Keroncong",
-    position: [-6.2155, 106.8660] as [number, number],
+    position: [-6.2135, 106.8616] as [number, number],
     slug: "sate-keroncong",
   },
   {
