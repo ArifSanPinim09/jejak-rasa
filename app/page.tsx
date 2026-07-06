@@ -273,20 +273,31 @@ export default function Home() {
             <div className="w-full h-[1px] bg-white/[0.08] mb-6 mt-8" />
 
             {/* About Author */}
-            <div className="text-center">
-              <p className="font-playfair text-[14px] md:text-[15px] text-dark-text mb-2">
-                Tentang Penulis
-              </p>
-              <p className="font-inter text-[12px] md:text-[13px] text-dark-muted leading-relaxed max-w-[600px] mx-auto">
-                Microsite ini dikembangkan oleh{" "}
-                <span className="text-dark-text font-medium">
-                  Zairi Raihan Ramadhan
-                </span>
-                , mahasiswa D4 Ekowisata, Sekolah Vokasi IPB University. Jejak
-                Rasa merupakan media interpretasi digital yang dirancang untuk
-                mengenalkan wisata kuliner berbasis sejarah di Jatinegara
-                melalui pendekatan storytelling dan desain interaktif.
-              </p>
+            <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6 text-center sm:text-left">
+              <div className="relative w-[80px] h-[80px] sm:w-[96px] sm:h-[96px] rounded-full overflow-hidden flex-shrink-0 border-2 border-white/10">
+                <Image
+                  src="/images/penulis.webp"
+                  alt="Zairi Raihan Ramadhan"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
+              </div>
+              <div>
+                <p className="font-playfair text-[14px] md:text-[15px] text-dark-text mb-1">
+                  Tentang Penulis
+                </p>
+                <p className="font-inter text-[12px] md:text-[13px] text-dark-muted leading-relaxed max-w-[500px]">
+                  Microsite ini dikembangkan oleh{" "}
+                  <span className="text-dark-text font-medium">
+                    Zairi Raihan Ramadhan
+                  </span>
+                  , mahasiswa D4 Ekowisata, Sekolah Vokasi IPB University. Jejak
+                  Rasa merupakan media interpretasi digital yang dirancang untuk
+                  mengenalkan wisata kuliner berbasis sejarah di Jatinegara
+                  melalui pendekatan storytelling dan desain interaktif.
+                </p>
+              </div>
             </div>
           </div>
         </footer>
