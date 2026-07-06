@@ -17,7 +17,7 @@ export const kulinerData: KulinerItem[] = [
       "Sebagai toko roti yang telah lama dikenal masyarakat, Gelora Bakery menjadi salah satu saksi perubahan kawasan Jatinegara dari masa ke masa. Kehadirannya menunjukkan bagaimana usaha kuliner lama dapat bertahan melalui loyalitas pelanggan dan konsistensi rasa yang dipertahankan.",
       "Bagi pengunjung, membeli roti di Gelora Bakery bukan hanya tentang menikmati makanan, tetapi juga merasakan pengalaman ruang yang membawa suasana memori kota lama Jakarta.",
     ],
-    images: [{ src: "/images/gelora-bakery.png", alt: "Gelora Bakery" }],
+    images: [{ src: "/images/gelora-bakery-new.webp", alt: "Gelora Bakery" }],
     cardImage: "/images/card-gelora-bakery.png",
     cardName: "Gelora\nBakery",
   },
@@ -32,7 +32,7 @@ export const kulinerData: KulinerItem[] = [
       "Menikmati Sate Keroncong bukan hanya tentang rasa makanan, tetapi juga tentang merasakan atmosfer kawasan lama Jakarta yang masih bertahan di tengah modernisasi kota. Kehadiran kuliner ini memperlihatkan bagaimana makanan dapat menjadi bagian dari memori kolektif masyarakat urban.",
     ],
     images: [
-      { src: "/images/sate-keroncong.png", alt: "Sate Keroncong" },
+      { src: "/images/sate-keroncong-new.webp", alt: "Sate Keroncong" },
     ],
     info: {
       address: "Jalan Matraman Raya No. 224, Jatinegara, Jakarta Timur",
@@ -81,7 +81,7 @@ export const kulinerData: KulinerItem[] = [
       "Kehadiran Combro Bu Aminah tidak hanya menjadi tempat membeli makanan ringan, tetapi juga menjadi bagian dari memori masyarakat sekitar. Proses memasak yang masih dilakukan secara sederhana menghadirkan suasana tradisional yang mulai jarang ditemukan di tengah perkembangan kota modern. Bagi pengunjung, menikmati combro hangat di tengah aktivitas kawasan Jatinegara memberikan pengalaman yang bukan hanya tentang rasa, tetapi juga tentang kedekatan dengan budaya kuliner lokal yang tetap bertahan dari generasi ke generasi.",
     ],
     images: [
-      { src: "/images/combro-bu-aminah.png", alt: "Combro Bu Aminah" },
+      { src: "/images/combro-bu-aminah-new.webp", alt: "Combro Bu Aminah" },
     ],
     cardImage: "/images/card-combro.png",
     cardName: "Combro\nBu Aminah",
