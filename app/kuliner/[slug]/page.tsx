@@ -38,16 +38,18 @@ export default async function KulinerDetailPage({ params }: Props) {
           </h1>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.1} className="w-full mb-10 md:mb-14">
-          <Image
-            src={item.images[0].src}
-            alt={item.images[0].alt}
-            width={960}
-            height={640}
-            className="w-full h-auto object-cover"
-            sizes="(max-width: 960px) 100vw, 960px"
-            priority
-          />
+        <AnimatedSection delay={0.1} className="w-full mb-10 md:mb-14 flex justify-center">
+          <div className="relative w-full max-w-[960px]">
+            <Image
+              src={item.images[0].src}
+              alt={item.images[0].alt}
+              width={960}
+              height={640}
+              className="w-full h-auto object-contain"
+              sizes="(max-width: 960px) 100vw, 960px"
+              priority
+            />
+          </div>
         </AnimatedSection>
 
         <div className="w-full space-y-5 sm:space-y-6 md:space-y-7 mb-10 md:mb-14">
