@@ -138,29 +138,16 @@ export default function Home() {
               beragam.
             </p>
           </AnimatedSection>
-          <AnimatedSection direction="right" delay={0.2} className="flex-1 w-full">
-            <div className="grid grid-cols-3 gap-3 sm:gap-4">
-              {[
-                { src: "/images/about-image.png", alt: "Kawasan Jatinegara" },
-                { src: "/images/combro-bu-aminah.png", alt: "Combro Bu Aminah" },
-                { src: "/images/siomay-wawa.png", alt: "Siomay Wawa" },
-                { src: "/images/cakwe-wastafel.png", alt: "Cakwe Wastafel" },
-                { src: "/images/bakmi-lorong.png", alt: "Bakmi Lorong" },
-                { src: "/images/sate-keroncong.png", alt: "Sate Keroncong" },
-                { src: "/images/soto-nimat-betawi.png", alt: "Soto Ni'mat Betawi" },
-                { src: "/images/kopi-bis-kota.png", alt: "Kopi Bis Kota" },
-                { src: "/images/gelora-bakery.png", alt: "Gelora Bakery" },
-              ].map((img, i) => (
-                <div key={i} className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 33vw, 300px"
-                  />
-                </div>
-              ))}
+          <AnimatedSection direction="right" delay={0.2} className="flex-1 w-full max-w-[450px]">
+            <div className="overflow-hidden">
+              <Image
+                src="/images/about-image.png"
+                alt="Kawasan Jatinegara"
+                width={450}
+                height={300}
+                className="w-full h-auto object-cover"
+                sizes="(max-width: 1024px) 100vw, 450px"
+              />
             </div>
           </AnimatedSection>
         </div>
