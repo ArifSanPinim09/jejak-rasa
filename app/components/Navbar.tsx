@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -37,18 +36,9 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo + Brand */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-          <div className="relative w-[40px] h-[40px] rounded-full overflow-hidden">
-            <Image
-              src="/images/about-image.png"
-              alt="Jejak Rasa"
-              fill
-              className="object-cover"
-              sizes="40px"
-            />
-          </div>
           <span
             className={`font-playfair text-[16px] sm:text-[18px] tracking-[0.1em] transition-colors duration-300 ${
-              isHome && !scrolled ? "text-white" : "text-foreground"
+              isHome && !scrolled ? "text-terracotta" : "text-terracotta"
             }`}
           >
             Jejak Rasa
@@ -64,8 +54,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`font-inter text-[14px] transition-colors duration-300 ${
                     isHome && !scrolled
-                      ? "text-white/80 hover:text-white"
-                      : "text-foreground-muted hover:text-foreground"
+                      ? "text-terracotta/90 hover:text-terracotta"
+                      : "text-terracotta/80 hover:text-terracotta"
                   }`}
                 >
                   {item.label}
@@ -86,19 +76,13 @@ export default function Navbar() {
           aria-expanded={isOpen}
         >
           <span
-            className={`w-6 h-0.5 transition-all duration-300 ${
-              isHome && !scrolled ? "bg-white" : "bg-foreground"
-            } ${isOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`w-6 h-0.5 transition-all duration-300 bg-terracotta ${isOpen ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`w-6 h-0.5 transition-all duration-300 ${
-              isHome && !scrolled ? "bg-white" : "bg-foreground"
-            } ${isOpen ? "opacity-0" : ""}`}
+            className={`w-6 h-0.5 transition-all duration-300 bg-terracotta ${isOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`w-6 h-0.5 transition-all duration-300 ${
-              isHome && !scrolled ? "bg-white" : "bg-foreground"
-            } ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`w-6 h-0.5 transition-all duration-300 bg-terracotta ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </div>
@@ -118,7 +102,7 @@ export default function Navbar() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="font-inter text-[14px] text-foreground hover:text-terracotta transition-colors"
+                    className="font-inter text-[14px] text-terracotta hover:text-terracotta-dark transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
