@@ -5,42 +5,42 @@ import { useEffect, useRef, useState } from "react";
 const kulinerLocations = [
   {
     name: "Combro Bu Aminah",
-    position: [-6.2146, 106.8722] as [number, number],
+    position: [-6.2146, 106.8629] as [number, number],
     slug: "combro-bu-aminah",
   },
   {
     name: "Siomay Wawa",
-    position: [-6.2156, 106.8732] as [number, number],
+    position: [-6.2173, 106.8651] as [number, number],
     slug: "siomay-wawa",
   },
   {
     name: "Cakwe Wastafel",
-    position: [-6.2136, 106.8742] as [number, number],
+    position: [-6.2204, 106.8651] as [number, number],
     slug: "cakwe-wastafel",
   },
   {
     name: "Bakmi Lorong",
-    position: [-6.2166, 106.8712] as [number, number],
+    position: [-6.2168, 106.8653] as [number, number],
     slug: "bakmi-lorong",
   },
   {
     name: "Sate Keroncong",
-    position: [-6.2126, 106.8752] as [number, number],
+    position: [-6.2155, 106.8660] as [number, number],
     slug: "sate-keroncong",
   },
   {
     name: "Soto Ni'mat Betawi",
-    position: [-6.2176, 106.8702] as [number, number],
+    position: [-6.2155, 106.8660] as [number, number],
     slug: "soto-nimat-betawi",
   },
   {
     name: "Kopi Bis Kota",
-    position: [-6.2116, 106.8762] as [number, number],
+    position: [-6.2173, 106.8661] as [number, number],
     slug: "kopi-bis-kota",
   },
   {
     name: "Gelora Bakery",
-    position: [-6.2186, 106.8692] as [number, number],
+    position: [-6.2205, 106.8667] as [number, number],
     slug: "gelora-bakery",
   },
 ];
@@ -88,7 +88,7 @@ export default function LeafletMap() {
       // Clean up any leftover Leaflet state on the container (Strict Mode safety)
       cleanupContainer(container);
 
-      map = L.map(container).setView([-6.215, 106.872], 15);
+      map = L.map(container).setView([-6.2170, 106.8655], 16);
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
