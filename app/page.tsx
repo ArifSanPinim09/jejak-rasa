@@ -265,6 +265,26 @@ export default function Home() {
                 Dibuat dengan ❤️ untuk Jatinegara
               </p>
             </div>
+
+            {/* Divider */}
+            <div className="w-full h-[1px] bg-white/[0.08] mb-6 mt-8" />
+
+            {/* About Author */}
+            <div className="text-center">
+              <p className="font-playfair text-[14px] md:text-[15px] text-dark-text mb-2">
+                Tentang Penulis
+              </p>
+              <p className="font-inter text-[12px] md:text-[13px] text-dark-muted leading-relaxed max-w-[600px] mx-auto">
+                Microsite ini dikembangkan oleh{" "}
+                <span className="text-dark-text font-medium">
+                  Zairi Raihan Ramadhan
+                </span>
+                , mahasiswa D4 Ekowisata, Sekolah Vokasi IPB University. Jejak
+                Rasa merupakan media interpretasi digital yang dirancang untuk
+                mengenalkan wisata kuliner berbasis sejarah di Jatinegara
+                melalui pendekatan storytelling dan desain interaktif.
+              </p>
+            </div>
           </div>
         </footer>
       </AnimatedSection>

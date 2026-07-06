@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "VAULT CONTEXT: Read ~/Documents/claude-obsidian/wiki/hot.md if it exists. This is your persistent memory from previous sessions. Use this context when answering questions. When saving important information, write to the vault at ~/Documents/claude-obsidian/."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "AUTO-SAVE REQUIRED: This session is ending. You MUST save the session to the claude-obsidian vault at ~/Documents/claude-obsidian/. Do these steps:\n\n1. Create a session note at ~/Documents/claude-obsidian/wiki/sessions/ with today's date and the current project name (use basename of PWD).\n2. Write a REAL summary of what was discussed, decided, built, and any important findings. Use actual content, not placeholders.\n3. If any wiki pages were mentioned or relevant, add them as related links.\n4. Update ~/Documents/claude-obsidian/wiki/hot.md with a ~200 word recent context summary.\n\nThis is the most important step. Knowledge must persist."
+          }
+        ]
+      }
+    ]
+  }
+}
